@@ -8,6 +8,7 @@ from pymongo import MongoClient
 
 client = MongoClient()
 db = client[db_name]
+# required twitter authentication data
 db.config.insert({'name': 'access_token_key',
                                    'value': ''})
 db.config.insert({'name': 'access_token_secret',
