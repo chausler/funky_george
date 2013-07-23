@@ -1,7 +1,8 @@
 <!DOCTYPE html>
+<!-- borrowed and modified from http://bl.ocks.org/mbostock/3903818 -->
 <meta charset="utf-8">
 <style>
-<!-- borrowed and modified from http://bl.ocks.org/mbostock/3903818 -->
+
 body {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   margin: auto;
@@ -43,6 +44,24 @@ form {
 </form>
 <script src="http://d3js.org/d3.v3.min.js"></script>
 <script>
+
+function allowDrop(ev)
+{
+ev.preventDefault();
+}
+
+function drag(ev)
+{
+ev.dataTransfer.setData("Text",ev.target.id);
+}
+
+function drop(ev)
+{
+ev.preventDefault();
+var data=ev.dataTransfer.getData("Text");
+ev.target.appendChild(document.getElementById(data));
+}
+
 
 var margin = {top: 20, right: 80, bottom: 30, left: 50},
     width = 960 - margin.left - margin.right,
@@ -144,3 +163,4 @@ d3.tsv("data.tsv", function(error, data) {
 });
 
 </script>
+
