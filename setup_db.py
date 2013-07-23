@@ -10,10 +10,10 @@ client = MongoClient()
 db = client[db_name]
 # required twitter authentication data
 db.config.insert({'name': 'access_token_key',
-                                   'value': ''})
+                'value': '1580422783-Vb9t2wcyA0SxxDRRolT95RhH9SOa544xKzSgaTh'})
 db.config.insert({'name': 'access_token_secret',
-                                   'value': ''})
+                'value': 'yRztjyIS1k6H3SiKcN8XgvllR8mqedNI20EJmzt444'})
 db.config.insert({'name': 'consumer_key',
-                                   'value': ''})
+                'value': 'AsW1u6F6JrxqPE5ZREWRiQ'})
 db.config.insert({'name': 'consumer_secret',
-                                   'value': ''})
+                 'value': 'OIgNF22tnaJjonfNsMt1sJAgltrbEDlvOlVjGEHMs'})
